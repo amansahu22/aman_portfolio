@@ -12,11 +12,13 @@ const Navbar = () => {
         <img src={logo} alt="Portfolio" />
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "work", "skills", "contact"].map((item, index) => (
-          <li key={`${item}-${index}`} className="app__flex p-text">
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        {["home", "about", "work", "skills", "testimonials", "contact"].map(
+          (item, index) => (
+            <li key={`${item}-${index}`} className="app__flex p-text">
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          )
+        )}
       </ul>
       <div className="app__navbar-menu">
         <HiMenuAlt4
@@ -34,7 +36,14 @@ const Navbar = () => {
               style={{ cursor: "pointer" }}
             />
             <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
+              {[
+                "home",
+                "about",
+                "work",
+                "skills",
+                "testimonials",
+                "contact",
+              ].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}

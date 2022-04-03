@@ -32,10 +32,9 @@
     flex: 1;
     //this will take up all the space that logo doesn't take
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     list-style: none;
-    padding-right: 3rem;
 
     li{
         margin: 0 1rem;

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { profile, react, node, sass, circle } from "../../constant/images";
 import "./Header.scss";
+import AppWrap from "../../wrapper/AppWrap";
 
 const scaleVariants = {
   whileInView: {
@@ -66,4 +67,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, "home");
