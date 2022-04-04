@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 // import { about01, about02, about03, about04 } from "../../constant/images";
 import { urlFor, client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
+import MotionWrapper from "../../wrapper/MotionWrapper";
 
 // const abouts = [
 //   {
@@ -57,7 +58,7 @@ const About = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
             className="app__profile-item"
-            key={about.title - `${index}`}
+            key={`${about.title}-${index}`}
           >
             <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
@@ -73,4 +74,8 @@ const About = () => {
   );
 };
 
-export default AppWrap(About, "about");
+export default AppWrap(
+  MotionWrapper(About, "app__about"),
+  "about",
+  "app__whitebg"
+);

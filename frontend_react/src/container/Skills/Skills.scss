@@ -1,0 +1,178 @@
+.app__skills {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__skills-container {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @media screen and (max-width:900px) {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.app__skills-list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 5rem;
+    padding: 0 2rem;
+
+    @media screen and (max-width:900px) {
+        margin-right: 0%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.app__skills-item {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    div {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        &:hover {
+            box-shadow: 0 0 25px rgb(229, 229, 229);
+        }
+
+        @media screen and (min-width:2000px) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @media screen and (max-width:500px) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    p {
+        font-weight: 500;
+        margin-top: 0.5rem;
+    }
+
+    @media screen and (mix-width:2000px) {
+        margin: 1rem 2rem;
+
+        p {
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+.app__skills-exp {
+    flex: 0.7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media screen and (max-width:900px) {
+        margin-top: 2rem;
+    }
+}
+
+.app__skills-exp-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.app__skills-exp-year {
+    margin-right: 3rem;
+
+    p {
+        font-weight: 800;
+        color: var(--secondary-color);
+
+        @media screen and (max-width:450px) {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.app__skills-exp-works {
+    flex: 1;
+
+    .app__skills-exp-work {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        h4 {
+            font-weight: 700;
+
+        }
+
+        p {
+            font-weight: 500;
+            color: rgb(120, 120, 120);
+            margin-top: 5px;
+            width: 100%;
+            padding-right: 2rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+
+            span {
+                color: var(--secondary-color);
+                font-size: 14px;
+            }
+        }
+
+        .app__skills-work-description {
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--grey-color);
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+
+//it is not straight forward to change style of outside packages and components 
+//it is not a good practice but we can do this by using !important
+.skills-tooltip {
+    max-width: 300px !important;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
+    padding: 0.6rem !important;
+    color: var(--grey-color) !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    opacity: 1 !important;
+
+    @media screen and (min-width:2000px) {
+        font-size: 1.75rem !important;
+        max-width: 500px !important;
+        line-height: 2 !important;
+    }
+}

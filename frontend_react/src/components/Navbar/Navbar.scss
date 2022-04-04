@@ -1,34 +1,36 @@
-.app__navbar{
+.app__navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 2rem 0.5rem;
+    padding: 0.7rem 2rem;
     background-color: rgba((255), 255, 255, 0.25);
-    backdrop-filter: blur(4px);//this property is not availbale for all browsers
+    backdrop-filter: blur(4px); //this property is not availbale for all browsers
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba((255), 255, 255, 0.18);
     position: fixed;
     z-index: 2;
+    margin-bottom: 1rem;
 }
 
-.app__navbar-logo{
+.app__navbar-logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
     //this is the beauty of scss, we can target elements inside of a class
-    img{
+    img {
         width: 200px;
         height: 50px;
 
-        @media screen and (min-width:2000px){
+        @media screen and (min-width:2000px) {
             width: 180px;
             height: 40px;
         }
     }
 }
 
-.app__navbar-links{
+.app__navbar-links {
     flex: 1;
     //this will take up all the space that logo doesn't take
     display: flex;
@@ -36,31 +38,31 @@
     align-items: center;
     list-style: none;
 
-    li{
+    li {
         margin: 0 1rem;
         cursor: pointer;
         flex-direction: column;
 
-        div{
+        div {
             width: 5px;
             height: 5px;
             background: transparent;
             border-radius: 50%;
         }
 
-        a{
+        a {
             color: var(--grey-color);
             text-decoration: none;
             flex-direction: column;
             text-transform: capitalize;
             padding: 3px 10px;
-            border-radius: 8px;    
+            border-radius: 8px;
             font-size: 1.1rem;
             font-weight: 500;
             transition: all 0.1s ease-in-out;
 
             //& refers to the current tag we are inside of
-            &:hover{
+            &:hover {
                 color: var(--secondary-color);
                 background-color: rgba(233, 235, 243, 0.918);
             }
@@ -73,7 +75,7 @@
     }
 }
 
-.app__navbar-menu{
+.app__navbar-menu {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -83,13 +85,13 @@
     align-items: center;
     background-color: var(--secondary-color);
 
-    svg{
+    svg {
         width: 70%;
         height: 70%;
         color: var(--white-color);
     }
 
-    div{
+    div {
         position: fixed;
         top: 0%;
         right: 0%;
@@ -107,16 +109,16 @@
         background-color: var(--white-color);
         background-size: cover;
         background-repeat: repeat;
-        box-shadow: 0 0 20px rgba(168,168,168,0.15);
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 
-        svg{
+        svg {
             width: 35px;
             height: 35px;
             color: var(--secondary-color);
             margin: 0.5rem 1rem;
         }
 
-        ul{
+        ul {
             list-style: none;
             margin: 0%;
             padding: 0%;
@@ -128,11 +130,11 @@
             justify-content: flex-start;
             align-items: flex-start;
 
-            li{
+            li {
                 cursor: pointer;
                 margin: 1rem;
 
-                a{
+                a {
                     text-decoration: none;
                     color: var(--grey-color);
                     font-size: 1rem;
@@ -140,14 +142,14 @@
                     font-weight: 500;
                     transition: all 0.1s ease-in-out;
 
-                    &:hover{
+                    &:hover {
                         color: var(--secondary-color);
                     }
                 }
             }
 
         }
-    
+
         @media screen and (min-width:900px) {
             display: none;
         }
@@ -157,4 +159,3 @@
         display: none;
     }
 }
-
