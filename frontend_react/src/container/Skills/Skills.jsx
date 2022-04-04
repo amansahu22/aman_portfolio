@@ -71,7 +71,9 @@ const Skills = () => {
                         {work.company}{" "}
                         <span>{`${work.start} - ${work.end}`}</span>
                       </p>
-                      <p className="app__skills-work-description">{work.desc}</p>
+                      <p className="app__skills-work-description">
+                        {work.desc}
+                      </p>
                     </motion.div>
                     <ReactTooltip
                       id={work.name}

@@ -149,8 +149,10 @@
         .app__skills-work-description {
             font-weight: 400;
             font-size: 14px;
+            line-height: 1.5rem;
             color: var(--grey-color);
             margin-top: 1rem;
+            letter-spacing: 0.2px;
         }
     }
 }
